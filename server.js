@@ -49,8 +49,8 @@ server.get('/weather', weatherHandler)
 
 function weatherHandler(req, res) {
     let cityQuery = req.query.city;
-    // let key = process.env.API_KEY;
-    let key = '0744e560367343ae9d810f1723397ea4';
+    let key = process.env.WEATHER_KEY;
+    // let key = '0744e560367343ae9d810f1723397ea4';
     let url = `http://api.weatherbit.io/v2.0/current?city=${cityQuery}&key=${key}`
 
     axios
@@ -80,8 +80,8 @@ server.get('/movies', moviesHandler)
 
 function moviesHandler(req, res) {
     let cityQuery = req.query.city;
-    // let key = process.env.API_KEY;
-    let key = '2f572ab958bab1048cb95a108203162a';
+    let key = process.env.MOVIES_KEY;
+    // let key = '2f572ab958bab1048cb95a108203162a';
     let url = `https://api.themoviedb.org/3/search/movie?api_key=${key}&query==${cityQuery}`
 
     axios
