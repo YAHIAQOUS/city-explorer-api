@@ -5,7 +5,6 @@ const cors = require('cors');
 require('dotenv').config();
 const axios = require('axios');
 
-const JSONData = require('./data/weather.json');
 
 const server = express();
 server.use(cors());    //make server opened for anyone
@@ -20,6 +19,7 @@ server.get('/test', (req, res) => {
 })
 
 // lab07
+// const JSONData = require('./data/weather.json');
 // http://localhost:3006/weather?cityName=amman
 // server.get('/weather', (req, res) => {
 
